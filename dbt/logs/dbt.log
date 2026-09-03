@@ -1,0 +1,208 @@
+[0m18:53:13.030713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ADCBFB5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ADE40B550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ADE40B340>]}
+
+
+============================== 18:53:13.046237 | 883f97ff-9f21-4cb9-a939-69f6eac2ebde ==============================
+[0m18:53:13.046237 [info ] [MainThread]: Running with dbt=1.12.3
+[0m18:53:13.048702 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\eknmeeu\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init dbt_crypto', 'log_path': 'logs'}
+[0m18:53:13.083989 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\eknmeeu\.dbt
+[0m18:53:13.088466 [debug] [MainThread]: Starter project path: C:\PythonEnv\PythonSoftware\3.10.13\lib\site-packages\dbt\include\starter_project
+[0m18:53:13.151358 [info ] [MainThread]: Setting up your profile.
+[0m19:12:00.070867 [info ] [MainThread]: Profile dbt_crypto written to C:\Users\eknmeeu\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m19:12:00.075864 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m19:12:00.077863 [info ] [MainThread]: dbt version: 1.12.3
+[0m19:12:00.078861 [info ] [MainThread]: python version: 3.10.13
+[0m19:12:00.079864 [info ] [MainThread]: python path: C:\PythonEnv\PythonSoftware\3.10.13\python.exe
+[0m19:12:00.082864 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:12:00.151270 [info ] [MainThread]: Using profiles dir at C:\Users\eknmeeu\.dbt
+[0m19:12:00.153212 [info ] [MainThread]: Using profiles.yml file at C:\Users\eknmeeu\.dbt\profiles.yml
+[0m19:12:00.154190 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt\dbt_crypto\dbt_project.yml
+[0m19:12:00.156118 [info ] [MainThread]: adapter type: postgres
+[0m19:12:00.157126 [info ] [MainThread]: adapter version: 1.11.0
+[0m19:12:00.266350 [info ] [MainThread]: Configuration:
+[0m19:12:00.268261 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:12:00.269260 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:12:00.270262 [info ] [MainThread]: Required dependencies:
+[0m19:12:00.271261 [debug] [MainThread]: Executing "git --help"
+[0m19:12:00.280300 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m19:12:00.282262 [info ] [MainThread]: Connection:
+[0m19:12:00.283265 [info ] [MainThread]:   host: postgresql://neondb_owner:npg_JLTZK0t4OIgb@ep-rough-water-ayj5p7ft-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+[0m19:12:00.284261 [info ] [MainThread]:   port: 5432
+[0m19:12:00.286263 [info ] [MainThread]:   user: neondb_owner
+[0m19:12:00.288368 [info ] [MainThread]:   database: neondb
+[0m19:12:00.289261 [info ] [MainThread]:   schema: analytics
+[0m19:12:00.290278 [info ] [MainThread]:   connect_timeout: 10
+[0m19:12:00.291280 [info ] [MainThread]:   role: None
+[0m19:12:00.292263 [info ] [MainThread]:   search_path: None
+[0m19:12:00.293261 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:12:00.295261 [info ] [MainThread]:   sslmode: None
+[0m19:12:00.296261 [info ] [MainThread]:   sslcert: None
+[0m19:12:00.297288 [info ] [MainThread]:   sslkey: None
+[0m19:12:00.298298 [info ] [MainThread]:   sslrootcert: None
+[0m19:12:00.299265 [info ] [MainThread]:   application_name: dbt
+[0m19:12:00.300261 [info ] [MainThread]:   autocommit: False
+[0m19:12:00.301261 [info ] [MainThread]:   retries: 1
+[0m19:12:00.302267 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m19:12:00.832262 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:12:01.296922 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:12:01.297922 [debug] [MainThread]: On debug: select 1 as id
+[0m19:12:01.298922 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:12:01.327228 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgresql://neondb_owner:npg_JLTZK0t4OIgb@ep-rough-water-ayj5p7ft-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require" to address: Non-recoverable failure in name resolution
+
+[0m19:12:01.329226 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m19:12:01.330224 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m19:12:01.330224 [debug] [MainThread]: On debug: No close available on handle
+[0m19:12:01.331273 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:12:01.331273 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m19:12:01.332261 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m19:12:01.333230 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "postgresql://neondb_owner:npg_JLTZK0t4OIgb@ep-rough-water-ayj5p7ft-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require" to address: Non-recoverable failure in name resolution
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:12:01.334227 [info ] [MainThread]: Your new dbt project "dbt_crypto" was created!
+Initialized new project in C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt\dbt_crypto\dbt_crypto
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:12:01.336226 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m19:12:01.338227 [debug] [MainThread]: Command `dbt init` succeeded at 19:12:01.338227 after 1128.79 seconds
+[0m19:12:01.339224 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:12:01.340227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ADCBFB5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ADE40B310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ADCFD90F0>]}
+[0m19:12:01.341226 [debug] [MainThread]: Flushing usage events
+[0m19:12:02.477233 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:13:19.867646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC4470B580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC46EE7550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC46EE72E0>]}
+
+
+============================== 19:13:19.875733 | 552bf1ba-0572-45f0-bc0c-86c93acbc1b3 ==============================
+[0m19:13:19.875733 [info ] [MainThread]: Running with dbt=1.12.3
+[0m19:13:19.877733 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\eknmeeu\\.dbt', 'invocation_command': 'dbt debug', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m19:13:19.934303 [info ] [MainThread]: dbt version: 1.12.3
+[0m19:13:19.936287 [info ] [MainThread]: python version: 3.10.13
+[0m19:13:19.937287 [info ] [MainThread]: python path: C:\PythonEnv\PythonSoftware\3.10.13\python.exe
+[0m19:13:19.938285 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:13:20.059241 [info ] [MainThread]: Using profiles dir at C:\Users\eknmeeu\.dbt
+[0m19:13:20.061160 [info ] [MainThread]: Using profiles.yml file at C:\Users\eknmeeu\.dbt\profiles.yml
+[0m19:13:20.062161 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt\dbt_project.yml
+[0m19:13:20.064159 [info ] [MainThread]: adapter type: postgres
+[0m19:13:20.066159 [info ] [MainThread]: adapter version: 1.11.0
+[0m19:13:20.068263 [info ] [MainThread]: Configuration:
+[0m19:13:20.069238 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:13:20.071159 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:13:20.075160 [info ] [MainThread]: Required dependencies:
+[0m19:13:20.077160 [debug] [MainThread]: Executing "git --help"
+[0m19:13:20.089250 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m19:13:20.092169 [info ] [MainThread]: Connection:
+[0m19:13:20.093170 [info ] [MainThread]:   host: postgresql://neondb_owner:npg_JLTZK0t4OIgb@ep-rough-water-ayj5p7ft-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+[0m19:13:20.095170 [info ] [MainThread]:   port: 5432
+[0m19:13:20.097686 [info ] [MainThread]:   user: neondb_owner
+[0m19:13:20.098696 [info ] [MainThread]:   database: neondb
+[0m19:13:20.100693 [info ] [MainThread]:   schema: analytics
+[0m19:13:20.101694 [info ] [MainThread]:   connect_timeout: 10
+[0m19:13:20.102694 [info ] [MainThread]:   role: None
+[0m19:13:20.103694 [info ] [MainThread]:   search_path: None
+[0m19:13:20.105697 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:13:20.106700 [info ] [MainThread]:   sslmode: None
+[0m19:13:20.107694 [info ] [MainThread]:   sslcert: None
+[0m19:13:20.109695 [info ] [MainThread]:   sslkey: None
+[0m19:13:20.110696 [info ] [MainThread]:   sslrootcert: None
+[0m19:13:20.111699 [info ] [MainThread]:   application_name: dbt
+[0m19:13:20.113697 [info ] [MainThread]:   autocommit: False
+[0m19:13:20.115696 [info ] [MainThread]:   retries: 1
+[0m19:13:20.117785 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m19:13:20.582021 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:13:21.007913 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:13:21.008994 [debug] [MainThread]: On debug: select 1 as id
+[0m19:13:21.008994 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:13:21.045565 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgresql://neondb_owner:npg_JLTZK0t4OIgb@ep-rough-water-ayj5p7ft-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require" to address: Non-recoverable failure in name resolution
+
+[0m19:13:21.046565 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m19:13:21.047574 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m19:13:21.048557 [debug] [MainThread]: On debug: No close available on handle
+[0m19:13:21.048557 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:13:21.049559 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m19:13:21.050569 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt\dbt_project.yml> not found
+
+[0m19:13:21.051498 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m19:13:21.052477 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "postgresql://neondb_owner:npg_JLTZK0t4OIgb@ep-rough-water-ayj5p7ft-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require" to address: Non-recoverable failure in name resolution
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:13:21.053476 [debug] [MainThread]: Command `dbt debug` failed at 19:13:21.053476 after 1.59 seconds
+[0m19:13:21.054556 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:13:21.055476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC4470B580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC47011930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC47013A00>]}
+[0m19:13:21.056477 [debug] [MainThread]: Flushing usage events
+[0m19:13:22.145870 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:18:41.672790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDCD0B5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDF4F7490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDF4F72E0>]}
+
+
+============================== 19:18:41.680791 | e46fb7af-b8a6-45f0-ad46-2de61eae9205 ==============================
+[0m19:18:41.680791 [info ] [MainThread]: Running with dbt=1.12.3
+[0m19:18:41.682790 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\eknmeeu\\Downloads\\Py_Neeraj\\DE_P\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m19:18:41.730988 [info ] [MainThread]: dbt version: 1.12.3
+[0m19:18:41.732985 [info ] [MainThread]: python version: 3.10.13
+[0m19:18:41.733984 [info ] [MainThread]: python path: C:\PythonEnv\PythonSoftware\3.10.13\python.exe
+[0m19:18:41.734984 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:18:41.816029 [info ] [MainThread]: Using profiles dir at C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt
+[0m19:18:41.817538 [info ] [MainThread]: Using profiles.yml file at C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt\profiles.yml
+[0m19:18:41.818545 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt\dbt_project.yml
+[0m19:18:41.819543 [info ] [MainThread]: Configuration:
+[0m19:18:41.820545 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m19:18:41.820545 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:18:41.821545 [info ] [MainThread]: Required dependencies:
+[0m19:18:41.822545 [debug] [MainThread]: Executing "git --help"
+[0m19:18:41.834545 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m19:18:41.836547 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m19:18:41.837592 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m19:18:41.838602 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "dbt_crypto", target "dev" invalid: None is not of type 'string'
+
+
+[0m19:18:41.839635 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\eknmeeu\Downloads\Py_Neeraj\DE_P\dbt\dbt_project.yml> not found
+
+[0m19:18:41.840543 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m19:18:41.841546 [debug] [MainThread]: Command `dbt debug` failed at 19:18:41.841546 after 0.83 seconds
+[0m19:18:41.842631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDCD0B5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDF4295A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDF29C6A0>]}
+[0m19:18:41.843544 [debug] [MainThread]: Flushing usage events
+[0m19:18:42.945510 [debug] [MainThread]: An error was encountered while trying to flush usage events
