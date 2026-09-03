@@ -1,0 +1,113 @@
+version: 2
+
+models:
+
+  - name: stg_crypto_klines
+    description: "Clean and standardized cryptocurrency 1-minute candle data."
+
+    columns:
+
+      - name: symbol
+        description: "Trading pair symbol."
+        tests:
+          - not_null
+
+      - name: interval
+        description: "Candle interval."
+        tests:
+          - not_null
+
+      - name: open_time
+        description: "Candle opening timestamp."
+        tests:
+          - not_null
+
+      - name: close_time
+        description: "Candle closing timestamp."
+        tests:
+          - not_null
+
+      - name: open
+        description: "Opening price."
+        tests:
+          - not_null
+
+      - name: high
+        description: "Highest price during the candle."
+        tests:
+          - not_null
+
+      - name: low
+        description: "Lowest price during the candle."
+        tests:
+          - not_null
+
+      - name: close
+        description: "Closing price."
+        tests:
+          - not_null
+
+      - name: volume
+        description: "Trading volume."
+        tests:
+          - not_null
+
+  - name: dim_symbol
+    description: "Cryptocurrency trading-pair dimension."
+
+    columns:
+
+      - name: symbol_key
+        description: "Warehouse surrogate key."
+        tests:
+          - not_null
+          - unique
+
+      - name: symbol
+        description: "Trading pair."
+        tests:
+          - not_null
+          - unique
+
+      - name: base_asset
+        description: "Base cryptocurrency."
+        tests:
+          - not_null
+
+      - name: quote_asset
+        description: "Quote currency."
+        tests:
+          - not_null
+
+  - name: fact_crypto_klines
+    description: "Fact table containing cryptocurrency candle measurements."
+
+    columns:
+
+      - name: symbol_key
+        description: "Foreign key to dim_symbol."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_symbol')
+              field: symbol_key
+
+      - name: symbol
+        description: "Trading pair."
+        tests:
+          - not_null
+
+      - name: open_time
+        description: "Candle opening timestamp."
+        tests:
+          - not_null
+
+      - name: close
+        description: "Closing price."
+        tests:
+          - not_null
+
+      - name: volume
+        description: "Trading volume."
+        tests:
+          - not_null

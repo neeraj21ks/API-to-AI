@@ -1,0 +1,173 @@
+version: 2
+
+models:
+
+  - name: stg_crypto_klines
+    description: "Staging model containing cleaned cryptocurrency candle events."
+
+    columns:
+      - name: symbol
+        description: "Trading pair symbol."
+        data_tests:
+          - not_null
+
+      - name: interval
+        description: "Candle interval."
+        data_tests:
+          - not_null
+
+      - name: open_time
+        description: "Candle opening timestamp."
+        data_tests:
+          - not_null
+
+      - name: close_time
+        description: "Candle closing timestamp."
+        data_tests:
+          - not_null
+
+      - name: open
+        description: "Opening price."
+        data_tests:
+          - not_null
+
+      - name: high
+        description: "Highest price during the candle."
+        data_tests:
+          - not_null
+
+      - name: low
+        description: "Lowest price during the candle."
+        data_tests:
+          - not_null
+
+      - name: close
+        description: "Closing price."
+        data_tests:
+          - not_null
+
+      - name: volume
+        description: "Trading volume."
+        data_tests:
+          - not_null
+
+      - name: source
+        description: "Upstream market data provider."
+
+      - name: batch_id
+        description: "Unique identifier of the ingestion batch that produced the record."
+
+      - name: ingested_at
+        description: "Timestamp when the record was ingested into the pipeline."
+
+
+  - name: int_daily_asset_metrics
+    description: "Daily OHLCV metrics calculated from staged cryptocurrency candles."
+
+    columns:
+      - name: symbol
+        description: "Trading pair symbol."
+        data_tests:
+          - not_null
+
+      - name: trading_date
+        description: "Calendar date derived from the candle opening timestamp."
+        data_tests:
+          - not_null
+
+      - name: first_candle_time
+        description: "Timestamp of the first available candle for the asset on the trading date."
+
+      - name: last_candle_time
+        description: "Timestamp of the last available candle for the asset on the trading date."
+
+      - name: daily_open
+        description: "Opening price of the first available candle for the trading date."
+        data_tests:
+          - not_null
+
+      - name: daily_high
+        description: "Highest price observed during the trading date."
+
+      - name: daily_low
+        description: "Lowest price observed during the trading date."
+
+      - name: daily_close
+        description: "Closing price of the last available candle for the trading date."
+        data_tests:
+          - not_null
+
+      - name: total_volume
+        description: "Total trading volume across available candles for the trading date."
+
+      - name: candle_count
+        description: "Number of available candles for the asset on the trading date."
+        data_tests:
+          - not_null
+
+      - name: daily_return_pct
+        description: "Percentage change from daily open to daily close."
+
+      - name: daily_range_pct
+        description: "Percentage price range from the daily low to the daily high."
+
+
+  - name: fct_asset_daily_analytics
+    description: "Daily cryptocurrency analytics including returns, day-over-day performance, and rankings."
+
+    columns:
+      - name: symbol
+        description: "Trading pair symbol."
+        data_tests:
+          - not_null
+
+      - name: trading_date
+        description: "Calendar date of the daily analytics record."
+        data_tests:
+          - not_null
+
+      - name: first_candle_time
+        description: "Timestamp of the first available candle for the trading date."
+
+      - name: last_candle_time
+        description: "Timestamp of the last available candle for the trading date."
+
+      - name: daily_open
+        description: "Opening price for the trading date."
+
+      - name: daily_high
+        description: "Highest price observed during the trading date."
+
+      - name: daily_low
+        description: "Lowest price observed during the trading date."
+
+      - name: daily_close
+        description: "Closing price for the trading date."
+        data_tests:
+          - not_null
+
+      - name: total_volume
+        description: "Total trading volume for the trading date."
+
+      - name: candle_count
+        description: "Number of available candles for the trading date."
+        data_tests:
+          - not_null
+
+      - name: daily_return_pct
+        description: "Percentage change from daily open to daily close."
+
+      - name: daily_range_pct
+        description: "Percentage range between daily high and daily low."
+
+      - name: previous_daily_close
+        description: "Previous available daily closing price for the asset."
+
+      - name: day_over_day_return_pct
+        description: "Percentage change from the previous available daily close."
+
+      - name: performance_rank
+        description: "Rank of the asset by daily return within the trading date."
+
+      - name: volatility_rank
+        description: "Rank of the asset by daily price range within the trading date."

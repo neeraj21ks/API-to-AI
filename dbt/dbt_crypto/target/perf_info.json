@@ -1,0 +1,50 @@
+{
+    "path_count": 150,
+    "parsed_path_count": 16,
+    "static_analysis_path_count": 3,
+    "static_analysis_parsed_path_count": 3,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.1671636999999464,
+    "load_macros_elapsed": 0.0006149999990157085,
+    "parse_project_elapsed": 0.8283728000005794,
+    "patch_sources_elapsed": 0.02781710000090243,
+    "process_manifest_elapsed": 0.007757200000924058,
+    "load_all_elapsed": 1.2779258999999001,
+    "projects": [
+        {
+            "project_name": "dbt_crypto",
+            "elapsed": 0.8281769000004715,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.2575806000004377,
+                    "parsed_path_count": 3
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.14360669999950915,
+                    "parsed_path_count": 11
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.42696710000018356,
+                    "parsed_path_count": 2
+                }
+            ],
+            "parsed_path_count": 16
+        },
+        {
+            "project_name": "dbt_postgres",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        }
+    ]
+}
