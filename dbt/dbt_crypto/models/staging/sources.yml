@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: crypto
+    description: "Operational cryptocurrency event tables produced by the ingestion and validation pipeline."
+    schema: public
+
+    config:
+      freshness:
+        warn_after:
+          count: 10
+          period: minute
+        error_after:
+          count: 30
+          period: minute
+      loaded_at_field: ingested_at
+
+    tables:
+      - name: clean_events
+        description: "Validated cryptocurrency OHLCV candle events. Contains cleaned 1-minute market data for supported trading symbols before analytical transformation in dbt."

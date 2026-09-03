@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: crypto
+    description: "Operational cryptocurrency event tables."
+    schema: public
+    tables:
+      - name: clean_events
+        description: "Validated and cleaned cryptocurrency candle events."
