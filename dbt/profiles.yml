@@ -4,10 +4,10 @@ dbt_crypto:
   outputs:
     dev:
       type: postgres
-      host: ep-rough-water-ayj5p7ft-pooler.c-5.us-east-2.aws.neon.tech
+      host: 
       port: 5432
       user: neondb_owner
-      password: "npg_JLTZK0t4OIgb"
+      password: "b"
       dbname: neondb
       schema: analytics
       threads: 4
