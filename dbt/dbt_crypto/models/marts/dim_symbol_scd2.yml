@@ -1,0 +1,34 @@
+version: 2
+
+models:
+
+  - name: dim_symbol_scd2
+    description: "Historical SCD Type 2 cryptocurrency symbol dimension."
+
+    columns:
+
+      - name: symbol_key
+        description: "Surrogate key identifying a specific SCD2 version."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: symbol
+        description: "Business key identifying the trading symbol."
+        data_tests:
+          - not_null
+
+      - name: base_asset
+        description: "Base cryptocurrency asset."
+        data_tests:
+          - not_null
+
+      - name: quote_asset
+        description: "Quote currency used for the trading pair."
+        data_tests:
+          - not_null
+
+      - name: effective_from
+        description: "Timestamp when this dimension version became effective."
+        data_tests:
+          - not_null
