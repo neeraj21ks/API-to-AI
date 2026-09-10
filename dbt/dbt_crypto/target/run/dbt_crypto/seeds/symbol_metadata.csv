@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "neondb"."analytics"."symbol_metadata";
+    -- dbt seed --
+    
+          insert into "neondb"."analytics"."symbol_metadata" ("symbol", "base_asset", "quote_asset") values
+          (%s,%s,%s),(%s,%s,%s),(%s,%s,%s)
+      
+
+;
+  
