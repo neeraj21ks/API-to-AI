@@ -6,4 +6,4 @@ SELECT
 FROM (
     SELECT DISTINCT symbol
     FROM {{ ref('stg_crypto_klines') }}
-) s
+)
