@@ -1,1 +1,30 @@
+# Secrets and local environment
 .env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Airflow runtime
+logs/
+airflow/logs/
+
+# dbt generated artifacts
+target/
+dbt_packages/
+logs/dbt.log
