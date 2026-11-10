@@ -1,14 +1,25 @@
 [project]
-name = "de-p"
+name = "nexus-dataops"
 version = "0.1.0"
-description = "Add your description here"
+description = "NEXUS: autonomous DataOps platform for detecting, investigating, and safely resolving data pipeline incidents."
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = []
+requires-python = ">=3.11"
+dependencies = [
+    "psycopg[binary]>=3.2,<4.0",
+    "python-dotenv>=1.0,<2.0",
+    "requests>=2.32,<3.0",
+    "urllib3>=2.2,<3.0",
+]
 
-[project.scripts]
-de-p = "de_p:main"
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9.0",
+    "ruff>=0.9,<1.0",
+]
 
-[build-system]
-requires = ["uv_build>=0.12.6,<0.13.0"]
-build-backend = "uv_build"
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
