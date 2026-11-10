@@ -1,26 +1,21 @@
 import os
-import psycopg2
+
+import psycopg
 from dotenv import load_dotenv
 
 load_dotenv()
 
-def get_db_connection():
-    return psycopg2.connect(os.getenv("DATABASE_URL"))
 
-if __name__ == "__main__":
-    try:
-        conn = get_db_connection()
-        print("Neon PostgreSQL connection successful.")
-        conn.close()
-    except Exception as err:
-        print(f"Database connection failed: {err}")
+def get_db_connection() -> psycopg.Connection:
+    """Create a PostgreSQL connection using DATABASE_URL.
 
-#def get_db_connection():
-    #conn=psycopg2.connect(
-        #host=DATABASE_HOST,
-        #port=DATABASE_PORT,
-        #dbname=DATABASE_NAME,
-        #user=DATABASE_USER,
-        #password=DATABASE_PASSWORD
-    #)
-    #return conn
+    The caller owns the connection and must close it (preferably with a
+    context manager). No connection is opened at import time.
+    """
+    database_url = os.getenv("DATABASE_URL")
+    if not database_url:
+        raise RuntimeError(
+            "DATABASE_URL is not configured. Copy .env.example to .env "
+            "and set the local PostgreSQL credentials."
+        )
+    return psycopg.connect(database_url)
